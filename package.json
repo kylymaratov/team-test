@@ -5,7 +5,8 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node build/app.js",
     "dev": "cross-env NODE_ENV=development nodemon --exec ts-node -T src/app.ts",
-    "build": "npx tsc"
+    "build:front": "cd web && npm run build",
+    "build": "npm run build:front && npx tsc"
   },
   "keywords": [],
   "author": "",
